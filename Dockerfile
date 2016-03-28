@@ -24,6 +24,9 @@ RUN apt-get install -y \
   unzip \
 && rm -rf /var/lib/apt/lists/*
 
+# set timezone
+RUN echo Asia/Shanghai > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+
 RUN groupadd -r build \
   && useradd -m -g build bazel
 
