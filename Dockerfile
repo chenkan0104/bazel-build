@@ -27,11 +27,7 @@ RUN apt-get install -y \
 # set timezone
 RUN echo Asia/Shanghai > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
 
-RUN groupadd -r build \
-  && useradd -m -g build bazel
-
-USER bazel
-WORKDIR /home/bazel
+WORKDIR /root
 
 RUN curl -L \
   https://github.com/bazelbuild/bazel/releases/download/0.2.0/bazel-0.2.0-installer-linux-x86_64.sh \
@@ -40,7 +36,7 @@ RUN chmod 700 bazel-install.sh
 RUN ./bazel-install.sh --user \
   && rm bazel-install.sh
 
-ENV BAZEL_BIN=/home/bazel/bin
+ENV BAZEL_BIN=/root/bin
 ENV PATH=$PATH:$BAZEL_BIN
 
 CMD ["/bin/bash"]
