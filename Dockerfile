@@ -1,11 +1,13 @@
 FROM ubuntu:14.04
 MAINTAINER Cameron <chenkan@gs-robot.com>
 
+# set timezone
+RUN echo Asia/Shanghai > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+
+# install jdk8
 RUN apt-get update \
   && apt-get install -y software-properties-common \
   && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-
-# install jdk8
 RUN add-apt-repository -y ppa:webupd8team/java \
   && apt-get update \
   && apt-get install -y oracle-java8-installer \
@@ -23,9 +25,6 @@ RUN apt-get install -y \
   zlib1g-dev \
   unzip \
 && rm -rf /var/lib/apt/lists/*
-
-# set timezone
-RUN echo Asia/Shanghai > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
 
 WORKDIR /root
 
