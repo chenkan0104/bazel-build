@@ -35,7 +35,9 @@ RUN chmod 700 bazel-install.sh
 RUN ./bazel-install.sh --user \
   && rm bazel-install.sh
 # we use this to avoid using --privileged flag
-RUN echo "startup --batch" > /root/.bazelrc
+RUN echo "startup --batch\n\
+build --spawn_strategy=standalone --genrule_strategy=standalone"\
+> /root/.bazelrc
 
 ENV BAZEL_BIN=/root/bin
 ENV PATH=$PATH:$BAZEL_BIN
