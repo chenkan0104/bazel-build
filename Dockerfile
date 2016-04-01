@@ -29,7 +29,7 @@ RUN apt-get install -y \
 WORKDIR /root
 
 RUN curl -L \
-  https://github.com/bazelbuild/bazel/releases/download/0.2.0/bazel-0.2.0-installer-linux-x86_64.sh \
+  https://github.com/bazelbuild/bazel/releases/download/0.2.1/bazel-0.2.1-installer-linux-x86_64.sh \
   -o bazel-install.sh
 RUN chmod 700 bazel-install.sh
 RUN ./bazel-install.sh --user \
