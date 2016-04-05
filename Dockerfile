@@ -8,6 +8,7 @@ ADD install_scripts.tar.gz /root/
 
 # install bazel and it's dependencies
 RUN cd /root \
+  && chmod +x install_java.sh && chmod +x install_bazel.sh \
   && ./install_java.sh && ./install_bazel.sh \
   && rm install_java.sh && rm install_bazel.sh
 
