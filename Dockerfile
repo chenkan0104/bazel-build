@@ -9,9 +9,7 @@ RUN cd /root \
   && ./install_java.sh && rm install_java.sh \
   && ./install_bazel.sh && rm install_bazel.sh
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-ENV BAZEL_BIN=/root/bin
-ENV PATH=$PATH:$BAZEL_BIN
+ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle PATH=$PATH:/root/bin
 
 WORKDIR /root
 
