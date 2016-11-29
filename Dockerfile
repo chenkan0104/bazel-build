@@ -7,7 +7,8 @@ ADD install_scripts.tar.gz /root/
 RUN cd /root \
   && ./pre_install.sh && rm pre_install.sh \
   && ./install_java.sh && rm install_java.sh \
-  && ./install_bazel.sh && rm install_bazel.sh
+  && ./install_bazel.sh && rm install_bazel.sh \
+  && ./install_python.sh && rm install_python.sh
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle PATH=$PATH:/root/bin
 
