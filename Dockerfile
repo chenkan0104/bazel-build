@@ -10,7 +10,7 @@ RUN cd /root \
   && ./install_bazel.sh && rm install_bazel.sh \
   && ./install_python.sh && rm install_python.sh
 
-ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle PATH=$PATH:/root/bin
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 WORKDIR /root
 
