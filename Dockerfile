@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 MAINTAINER Cameron <chenkan@gs-robot.com>
 
 ADD install_scripts.tar.gz /root/
