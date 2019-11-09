@@ -30,7 +30,7 @@ cd .. && rm -rf cppcheck-1.89
 pip install cpplint
 
 # install git for fetching code
-apt-get install git
+apt-get install -y git
 
 # install curl for fetching bazel
 apt-get install -y curl
