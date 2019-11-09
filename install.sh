@@ -32,6 +32,9 @@ pip install cpplint
 # install git for fetching code
 apt-get install -y git
 
+# install bsdmainutils for hexdump(some projects depend on this to build)
+apt-get install -y bsdmainutils
+
 # install curl for fetching bazel
 apt-get install -y curl
 # install prerequisites of bazel
