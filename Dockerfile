@@ -1,8 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER Cameron <chenkan@gs-robot.com>
 
-ADD install.sh /root/
-ADD sources.list /root/
+ADD install.sh /root/install.sh
+ADD sources.list.18.04 /root/sources.list
 
 # run install.sh
 RUN cd /root && ./install.sh && rm install.sh

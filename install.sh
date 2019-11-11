@@ -7,7 +7,7 @@ mv sources.list /etc/apt/sources.list
 apt-get update
 
 # set timezone
-apt-get install -y tzdata
+apt-get install -y apt-utils tzdata
 echo Asia/Shanghai > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
 
 # install jdk8
