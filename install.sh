@@ -35,6 +35,9 @@ apt-get install -y git
 # install bsdmainutils for hexdump(some projects depend on this to build)
 apt-get install -y bsdmainutils
 
+# install sudo(some projects depend on this to build)
+apt-get install -y sudo
+
 # install curl for fetching bazel
 apt-get install -y curl
 # install prerequisites of bazel
