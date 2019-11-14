@@ -1,0 +1,6 @@
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe
