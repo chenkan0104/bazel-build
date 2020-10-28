@@ -41,7 +41,7 @@ apt-get install -y curl
 # install prerequisites of bazel
 apt-get install -y pkg-config zip g++ zlib1g-dev unzip
 
-cd /tmp && wget https://github.com/bazelbuild/bazel/releases/download/1.0.1/bazel-1.0.1-installer-linux-x86_64.sh -O bazel-installer.sh
+cd /tmp && wget https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-installer-linux-x86_64.sh -O bazel-installer.sh
 chmod +x bazel-installer.sh && bash bazel-installer.sh && rm bazel-installer.sh
 
 rm -rf /var/lib/apt/lists/*
