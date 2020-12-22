@@ -32,6 +32,9 @@ pip install cpplint
 # install git for fetching code
 apt-get install -y git
 
+# install cmake and ninja-build
+apt-get install -y cmake ninja-build
+
 # install bsdmainutils for hexdump(some projects depend on this to build)
 apt-get install -y bsdmainutils
 
@@ -51,7 +54,7 @@ apt-get install -y bazel
 rm -rf /var/lib/apt/lists/*
 
 # write default bazel config
-echo "build --spawn_strategy=standalone --genrule_strategy=standalone"\
+echo "build --remote_cache=http://172.17.110.16:9090"\
 > /root/.bazelrc
 
 # run bazel to avoid "Extracting Bazel installation..."
