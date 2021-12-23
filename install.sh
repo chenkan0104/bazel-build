@@ -54,8 +54,4 @@ apt-get install -y bazel
 rm -rf /var/lib/apt/lists/*
 
 # write default bazel config
-echo "build --remote_cache=http://172.17.110.16:9090"\
-> /root/.bazelrc
-
-# run bazel to avoid "Extracting Bazel installation..."
-bazel
+echo "build --remote_cache=grpc://bb-storage.vpc.gs-robot.cn:8980 --remote_instance_name=gs" > /root/.bazelrc
